@@ -1,0 +1,39 @@
+<!--components/verticalTab/verticalTab.wxml-->
+<view class="tab">
+  <block wx:for="{{tabLists}}" wx:key="{{index}}">
+    <view class="item {{current == index ? 'focus': ''}}" data-index="{{index}}" bindtap='selectItem'>
+      <image src="{{current == index ? item.selected: item.src}}" mode="widthFix" class="img"></image>
+      <view class="name">{{item.name}}</view>
+    </view>
+  </block>
+  <!--
+  <view class="location item" bindtap='toggleTab("location")'>
+    <image src="" mode="widthFix" class="img"></image>
+    <view class="name"></view>
+  </view>
+  <view class="shop item">
+    <image src="" mode="widthFix" class="img"></image>
+    <view class="name"></view>
+  </view>
+  <view class="tuijian item">
+    <image src="" mode="widthFix" class="img"></image>
+    <view class="name"></view>
+  </view>
+  <view class="hongbao item">
+    <image src="" mode="widthFix" class="img"></image>
+    <view class="name"></view>
+  </view>
+  <view class="hot item">
+    <image src="" mode="widthFix" class="img"></image>
+    <view class="name"></view>
+  </view>
+  <view class="luxian item">
+    <image src="" mode="widthFix" class="img"></image>
+    <view class="name"></view>
+  </view>
+  <view class="fuwu item">
+    <image src="" mode="widthFix" class="img"></image>
+    <view class="name"></view>
+  </view>
+  -->
+</view>

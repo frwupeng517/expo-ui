@@ -1,0 +1,18 @@
+/* components/boothContainer/boothContainer.wxss */
+.booth-container{
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 100%;  */
+  width: 600px;
+  overflow: auto;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.booth{
+  width: 120rpx;
+  height: 80rpx;
+  margin: 0 70rpx 50rpx 0;
+  background-color: #E6E6E6;
+}

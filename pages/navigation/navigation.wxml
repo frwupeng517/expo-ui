@@ -1,0 +1,40 @@
+<!--pages/navigation/navigation.wxml-->
+<view class="container">
+  <view class="search-container">
+    <view class="search-box">
+      <icon class="search-icon" type="search" size="15" color="#E66F71" wx:if="{{showSearchIcon}}" />
+      <input 
+        placeholder='搜索摊名、摊号' 
+        placeholder-style='font-size: 14px; color: #ccc; text-align: center;' 
+        bindfocus='hideIcon' 
+        bindblur='showIcon' />
+    </view>
+  </view>
+  <view class="main">
+    <booth-container class="booth-container" showHongBao="{{showHongBao}}"></booth-container>
+    <vertical-tab class="vertical-tab" bind:customevent="onCustomEvent" bind:showHongBaoEvent="onShowHongBaoEvent"></vertical-tab>
+  </view>
+  <view class="modal" wx:if="{{showServiceModal}}" bindtap='closeModal'>
+    <view class="modal-content">
+      <view class="content">
+        <view class="title">服务设施</view>
+        <view class="item">
+          <image src="./img/churukou.png" mode="widthFix" class="img" />
+          <view class="text">出入口</view>
+        </view>
+        <view class="item">
+          <image src="./img/wc.png" mode="widthFix" class="img" />
+          <view class="text">洗手间</view>
+        </view>
+        <view class="item">
+          <image src="./img/shangwu.png" mode="widthFix" class="img" />
+          <view class="text">商务中心</view>
+        </view>
+        <view class="item">
+          <image src="./img/zizhu.png" mode="widthFix" class="img" />
+          <view class="text">自助设备</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

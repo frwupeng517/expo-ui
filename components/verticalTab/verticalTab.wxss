@@ -1,0 +1,23 @@
+/* components/verticalTab/verticalTab.wxss */
+
+.item{
+  text-align: center;
+}
+
+.item:not(:first-child){
+  margin-top: 14rpx;
+  padding-top: 14rpx;
+  border-top: 1px solid #ABD0C8;
+}
+
+.item.focus .name{
+  color: #FF776D;
+}
+
+.img{
+  width: 60rpx;
+}
+.name{
+  font-size: 20rpx;
+  color: #ABD0C8;
+}

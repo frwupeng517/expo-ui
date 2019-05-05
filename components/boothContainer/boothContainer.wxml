@@ -1,0 +1,14 @@
+<!--components/boothContainer/boothContainer.wxml-->
+<!-- <scroll-view
+ scroll-x
+ scroll-with-animation
+ scroll-left="10"
+ style="width: 600px;"> -->
+ 
+  <view class="booth-container">
+    <block wx:for="{{booths}}" wx:key="{{index}}">
+      <booth class="booth" booth="{{item}}" showHongBao="{{showHongBao}}" bind:foucsBoothEvent="onFoucsBoothEvent"></booth>
+    </block>
+  </view>
+
+<!-- </scroll-view> -->

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "booth": "/components/booth/booth"
+  }
+}

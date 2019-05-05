@@ -1,0 +1,97 @@
+/* pages/navigation/navigation.wxss */
+.search-container{
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  background-color: #E9F5F5;
+}
+.search-box{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 30rpx;
+}
+.search-box input{
+  width: 100%;
+  height: 60rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #ccc;
+  font-size: 28rpx;
+}
+.search-icon{
+  position: relative;
+  left: 80rpx;
+  transform: rotate(90deg);
+}
+
+.booth-container{
+  
+}
+
+.main{
+  position: relative;
+}
+
+.vertical-tab{
+  position: fixed;
+  top: 120rpx;
+  /* bottom: 30rpx; */
+  right: 30rpx;
+  width: 110rpx;
+  padding: 20rpx 10rpx;
+  box-sizing: border-box;
+  border: 1px solid #EFF1F0;
+  border-radius: 20rpx;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.modal{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .2);
+  z-index: 9999;
+}
+.modal-content{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  background: #D7D8DC;
+  background: -webkit-linear-gradient(#D4D5D9, #FFFFFF); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#D4D5D9, #FFFFFF); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#D4D5D9, #FFFFFF); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#D4D5D9, #FFFFFF); /* 标准的语法 */
+}
+.content{
+  background-color: #fff;
+}
+.content .title{
+  padding: 20rpx 0;
+  letter-spacing: 4rpx;
+  font-size: 36rpx;
+  color: #333;
+  text-align: center;
+}
+.item{
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0 20rpx 20%;
+  border-top: 1px solid #E8EAE9;
+}
+.item .img{
+  width: 80rpx;
+  margin-right: 20rpx;
+}
+.item .text{
+  font-size: 32rpx;
+  color: #555;
+}

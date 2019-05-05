@@ -1,0 +1,52 @@
+{
+  "pages":[
+    "pages/navigation/navigation",
+    "pages/activity/activity",
+    "pages/exhibitor/exhibitor",
+    "pages/myExpo/myExpo",
+    "pages/report/report"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#98999E",
+    "selectedColor": "#E77776",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/activity/activity",
+        "iconPath": "pages/activity/img/huodong.png",
+        "selectedIconPath": "pages/activity/img/huodong_selected.png",
+        "text": "今日活动"
+      },
+      {
+        "pagePath": "pages/exhibitor/exhibitor",
+        "iconPath": "pages/exhibitor/img/mingce.png",
+        "selectedIconPath": "pages/exhibitor/img/mingce_selected.png",
+        "text": "展商名册"
+      },
+      {
+        "pagePath": "pages/myExpo/myExpo",
+        "iconPath": "pages/myExpo/img/wo.png",
+        "selectedIconPath": "pages/myExpo/img/wo_selected.png",
+        "text": "我的展会"
+      },
+      {
+        "pagePath": "pages/navigation/navigation",
+        "iconPath": "pages/navigation/img/daohang.png",
+        "selectedIconPath": "pages/navigation/img/daohang_selected.png",
+        "text": "展场导航"
+      },
+      {
+        "pagePath": "pages/report/report",
+        "iconPath": "pages/report/img/baogao.png",
+        "selectedIconPath": "pages/report/img/baogao_selected.png",
+        "text": "展会报告"
+      }
+    ]
+  }
+}

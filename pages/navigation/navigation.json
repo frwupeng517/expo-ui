@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "展场导航",
+  "navigationBarBackgroundColor": "#E56F6F",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "booth-container": "/components/boothContainer/boothContainer",
+    "vertical-tab": "/components/verticalTab/verticalTab"
+  }
+}
