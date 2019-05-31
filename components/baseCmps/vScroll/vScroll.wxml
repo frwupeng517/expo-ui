@@ -1,0 +1,59 @@
+<!--components/baseCmps/vScroll/vScroll.wxml-->
+<view class="v-scroll">
+  <!-- 滚动列表 -->
+  <scroll-view scroll-y scroll-with-animation scroll-into-view="{{toView}}" style="height: {{scrollHeight}}px;">
+    <!-- 需要按分组展示 -->
+    <view class="need-group" wx:if="{{needGroup}}">
+      <block wx:for="{{scrollItems}}" wx:for-item="group" wx:for-index="groupIndex" wx:key="{{groupIndex}}">
+        <view class="group" id="{{group.groupName+'-'+group.id}}">
+          <view class="group-name">{{group.groupName}}</view>
+          <view class="group-detail">
+            <block wx:for="{{group.items}}" wx:key="{{index}}">
+              <view class="item {{item.empty ? 'no-people' : ''}}">
+                <view 
+                  wx:if="{{needCheck}}"
+                  class="checkbox {{item.selected ? 'checked' : ''}}" 
+                  data-groupindex="{{groupIndex}}"
+                  data-itemindex="{{index}}"
+                  bindtap='saveItem'>
+                </view>
+                <view class="item-content" data-id="{{item.id}}" bindtap='tapItem'>
+                  <view class="item-name">{{item.name}}</view>
+                  <view class="item-star" wx:if="{{item.star > 0}}">
+                    <block wx:for="{{item.star}}" wx:key="{{index}}">
+                      <image src="/images/star.png" mode="widthFix" style="width: 30rpx;"></image>
+                    </block>
+                  </view>
+                  <view class="item-hongbao" wx:if="{{item.hongBao}}">
+                    <image src="/images/hongbao.png" mode="widthFix" style="width: 30rpx;"></image>
+                  </view>
+                  <view class="item-empty" wx:if="{{item.empty}}">(无人)</view>
+                  </view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </block>
+    </view>
+    <!-- 不需要按分组展示 -->
+    <view class="no-group" wx:else>
+      <block wx:for="{{scrollItems}}" wx:key="{{index}}">
+        <view 
+          class="no-group__item {{item.selected ? 'selected' : ''}}" 
+          data-index="{{index}}" 
+          data-id="{{item.id ? item.id : 'null'}}" 
+          data-selected="{{item.selected}}"
+          bindtap='tapItem'>
+          <view class="time" wx:if="{{item.time && item.time != ''}}">{{item.time}}</view>
+          <view class="name">{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+  <!-- 右侧电梯按钮 -->
+  <scroll-view class="elevator-items" scroll-y scroll-with-animation style="height: {{scrollHeight - 20}}px;">
+    <block wx:for="{{elevatorItems}}" wx:key="{{index}}">
+      <view class="elevator" data-id="{{item.id}}" data-name="{{item.name}}" catch:tap="tapElevator">{{item.name}}</view>
+    </block>
+  </scroll-view>
+</view>

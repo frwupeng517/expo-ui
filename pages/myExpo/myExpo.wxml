@@ -1,2 +1,44 @@
 <!--pages/myExpo/myExpo.wxml-->
-<text>pages/myExpo/myExpo.wxml</text>
+<view class="container">
+  <date-tab></date-tab>
+  <time-line></time-line>
+  <view class="expo-content">
+    <v-tab id="tabItems" class="tabItems" tabIndex="{{tabIndex}}" tabItems="{{tabItems}}" bind:getTabIndex="onGetTabIndex"></v-tab>
+    <!-- 观展 -->
+    <view hidden="{{tabIndex != 0}}" class="expo-content__detail" style="height: {{scrollHeight}}px;">
+      <view class="catelog-content">
+        <v-catelog 
+          catelog="{{catelogItems}}" 
+          bind:updateCatelog="onUpdateCatelog">
+        </v-catelog>
+      </view>
+      <view class="scroll-content">
+        <v-scroll 
+          scrollHeight="{{scrollHeight}}" 
+          needGroup="true"
+          scrollItems="{{scrollItems}}"
+          detailPageUrl="/pages/exhibitorDetail/exhibitorDetail"
+          bind:updateScrollItems="onUpdateScrollItems">
+        </v-scroll>
+      </view>
+    </view>
+    <!-- 活动 -->
+    <view hidden="{{tabIndex != 1}}" class="expo-content__detail" style="height: {{scrollHeight}}px;">
+      <view class="catelog-content">
+        <v-catelog 
+          catelog="{{catelogItems}}" 
+          bind:updateCatelog="onUpdateCatelog">
+        </v-catelog>
+      </view>
+      <view class="scroll-content">
+        <v-scroll 
+          scrollHeight="{{scrollHeight}}" 
+          scrollItems="{{tvLists}}"
+          detailPageUrl="/pages/exhibitorDetail/exhibitorDetail"
+          bind:updateScrollItems="onUpdateScrollItems">
+        </v-scroll>
+      </view>
+    </view>
+  </view>
+</view>
+

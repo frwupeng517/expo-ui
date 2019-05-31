@@ -1,2 +1,83 @@
 <!--pages/exhibitor/exhibitor.wxml-->
-<text>pages/exhibitor/exhibitor.wxml</text>
+<view class="container">
+  <view class="tabs">
+    <view class="tab not-focus {{activeTab == 'not' ? 'selected': ''}}" id="not" bindtap='tabChange'>未关注</view>
+    <view class="tab has-focus {{activeTab == 'has' ? 'selected': ''}}" id="has"  bindtap='tabChange'>已关注</view>
+  </view>
+  <view class="near-booth__container">
+    <view class="near-booth">
+      <view class="title">我附近的展位</view>
+      <view class="current">
+        <image src="img/location.png" mode="widthFix" style="width: 50rpx;"></image>
+        <view class="text">当前位置</view>
+      </view>
+    </view>
+  </view>
+  <view class="booth-container">
+    <view class="tab-container">
+      <view class="filter-tab" id="filter-tab">
+        <block wx:for="{{tabs}}" wx:key="{{index}}">
+          <view class="tab {{activeIndex == index ? 'selected' : ''}}" id="{{index}}" bindtap='toggleFilterContent'>
+            <view class="tab-text">{{item}}</view>
+            <view class="tab-icon"></view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <v-scroll 
+      needGroup="true"  
+      needCheck="true"
+      scrollHeight="{{modalHeight}}" 
+      scrollItems="{{lists}}" 
+      detailPageUrl="../exhibitorDetail/exhibitorDetail"
+      bind:updateScrollItems="onUpdateScrollItems">
+    </v-scroll>
+  </view>
+
+  <!-- 自定义弹层组件 -->
+  <custom-modal show-modal="{{showModal}}" modal-height="{{modalHeight}}" bind:closeModalEvent="onCloseModal">
+    <!-- 品类 -->
+    <view slot="catelog" wx:if="{{slotName == 'catelog'}}" class="modal-content">
+      <view class="catelog-content">
+        <block wx:for="{{catelogItems}}" wx:key="{{index}}">
+          <view class="catelog {{item.selected ? 'selected' : ''}}" id="{{index}}" bindtap='chooseCatelog'>{{item.name}}</view>
+        </block>
+      </view>
+      <view class="btn-content">
+        <view class="btn reset" bindtap='resetCatelog'>重置</view>
+        <view class="btn confirm" bindtap='confirmCatelog'>完成</view>
+      </view>
+    </view>
+
+    <!-- 所在地 -->
+    <view slot="location" wx:if="{{slotName == 'location'}}" class="modal-content">
+      <view class="location-content">
+        <view class="location-content__name">
+          <v-catelog 
+            catelog="{{countryGroupLists}}" 
+            bind:updateCatelog="onUpdateCatelog">
+          </v-catelog>
+        </view>
+        <view class="location-content__detail">
+          <v-scroll  
+            needCheck="true"
+            scrollHeight="{{modalHeight - 100}}" 
+            scrollItems="{{cityLists}}" 
+            bind:updateScrollItems="onUpdateCityLists">
+          </v-scroll>
+        </view>
+      </view>
+      <view class="btn-content">
+        <view class="btn reset" bindtap='resetLocation'>重置</view>
+        <view class="btn confirm" bindtap='confirmLocation'>完成</view>
+      </view>
+    </view>
+    <view slot="popular" wx:if="{{slotName == 'popular'}}">
+      人气
+    </view>
+    <view slot="status" wx:if="{{slotName == 'status'}}">
+      展位状态
+    </view>
+  </custom-modal>
+
+</view>

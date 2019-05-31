@@ -1,0 +1,25 @@
+<!--components/activityCmps/tvList/tvList.wxml-->
+<view class="tv-list">
+  <view class="all-list">
+    <view class="title">所有精彩节目：</view>
+    <view class="list-content">
+      <view class="toggle-tv">
+        <view class="tv">{{tvs[tvIndex]}}</view>
+        <picker bindchange="bindPickerChange" value="{{tvIndex}}" range="{{tvs}}">
+          <view class="btn btn-warning">切换频道</view>
+        </picker>
+      </view>
+      <scroll-view scroll-y class="tv-items" style="height: {{scrollHeight}}px;">
+        <view class="date-tv" id="today">今天</view>
+        <block wx:for="{{tvItems}}" wx:key="{{index}}">
+          <navigator class="item" hover-class='none' url=''>
+            <view class="item-time">{{item.time}}</view>
+            <view class="item-name">{{item.name}}</view>
+            <view class="btn" wx:if="{{item.finish}}">已结束</view>
+            <view class="btn {{item.focus ? 'btn-danger' : 'btn-primary'}}" wx:if="{{!item.finish}}" data-index="{{index}}" bindtap='toggleFocus'>{{item.focus ? '已关注' : '+关注'}}</view>
+          </navigator>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,123 @@
+/* components/baseCmps/vScroll/vScroll.wxss */
+.v-scroll{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.need-group .group-name{
+  padding: 10rpx 15rpx;
+  font-size: 24rpx;
+  color: #333333;
+  background-color: #efefef;
+}
+.need-group .group-detail{
+  background-color: #fff;
+}
+.need-group .item{
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+}
+.need-group .item .checkbox{
+  margin-right: 20rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+.need-group .item .checkbox.checked{
+  border-color: #ff877e;
+  background-color: #ff877e;
+}
+.need-group .item .item-content{
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 20rpx 0;
+}
+
+.item-content .item-name{
+  font-size: 26rpx;
+  color: #4e5f71;
+}
+.need-group .item:not(:last-child) .item-content{
+  border-bottom: 1px solid #ddd;
+}
+
+.item-star{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-star, .item-hongbao{
+  margin-left: 10rpx;
+}
+
+.item.no-people{
+  position: relative;
+  top: -1px;
+  background-color: #F7F7F7;
+}
+.item.no-people .item-content{
+  border-bottom: none;
+}
+.item-empty{
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.elevator-items{
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 40rpx;
+  text-align: center;
+}
+.elevator-items .elevator{
+  font-size: 24rpx;
+  color: #ff877e;
+}
+
+.no-group{
+  width: 100%;
+  padding: 0 0 20rpx 10rpx;
+  background: #fff;
+}
+.no-group__item{
+  display: flex;
+  align-items: center;
+  padding: 20rpx 20rpx 20rpx 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 24rpx;
+  color: #555e73;
+}
+.no-group__item.selected{
+  position: relative;
+  color: #2b9df1;
+}
+.no-group__item.selected::after{
+  position: absolute;
+  right: 30rpx;
+  top: 25rpx;
+  content: '';
+  display: block;
+  width: 25rpx;
+  height: 12rpx;
+  border-color: #4691ff;
+  border-style: solid;
+  border-width: 0 0 1px 1px;
+  transform: rotate(-45deg);
+}
+.no-group__item .time{
+  margin-right: 20rpx;
+}
+.no-group__item .name{
+  max-width: 500rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+

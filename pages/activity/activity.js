@@ -5,21 +5,38 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    tabIndex: 0, // 高亮的标签页
+    tabItems: ['选择内容', '观看'],
+    windowHeight: 0, // 窗口的高度
+    
+  },
+  // 从子组件接收tabIndex
+  onGetTabIndex(e) {
+    let tabIndex = e.detail.behavior.tabIndex
+    this.setData({
+      tabIndex: tabIndex
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let _this = this
+    wx.getSystemInfo({
+      success: function(res) {
+        _this.setData({
+          windowHeight: res.windowHeight
+        })
+      },
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**

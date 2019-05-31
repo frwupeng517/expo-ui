@@ -4,11 +4,17 @@
  scroll-with-animation
  scroll-left="10"
  style="width: 600px;"> -->
- 
+<movable-area>
   <view class="booth-container">
     <block wx:for="{{booths}}" wx:key="{{index}}">
       <booth class="booth" booth="{{item}}" showHongBao="{{showHongBao}}" bind:foucsBoothEvent="onFoucsBoothEvent"></booth>
     </block>
   </view>
+  <movable-view x="{{x}}" y="{{y}}" direction="all" bindchange="onChange" wx:if="{{showMyLocation}}">
+    <view class="location">
+      <view class="dot"></view>
+    </view>
+  </movable-view>
+</movable-area>
 
 <!-- </scroll-view> -->

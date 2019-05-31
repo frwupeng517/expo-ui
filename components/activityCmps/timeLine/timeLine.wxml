@@ -1,0 +1,14 @@
+<!--components/timeLine/timeLine.wxml-->
+<view class="time-line">
+  <view class="start">09:00</view>
+  <view class="line-container">
+    <view class="line" id="line"></view>
+    <view class="line-slider" style="width: {{sliderOffset}}px;"></view>
+    <view class="line-slider__desc"  wx:if="{{remainHour != 0}}" style="left: {{sliderOffset - 20}}px;">
+      <view class="line-slider__circle"></view>
+      <view class="line-slider__text">{{'-' + remainHour + 'h'}}</view>
+    </view>
+  </view>
+  <view class="end">17:00</view>
+</view>
+

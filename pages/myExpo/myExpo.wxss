@@ -1,1 +1,13 @@
 /* pages/myExpo/myExpo.wxss */
+.expo-content{
+  margin-top: 20rpx;
+}
+.expo-content__detail{
+  display: flex;
+}
+.catelog-content{
+  width: 180rpx;
+}
+.scroll-content{
+  flex: 1;
+}

@@ -1,16 +1,22 @@
 {
-  "pages":[
-    "pages/navigation/navigation",
+  "pages": [
     "pages/activity/activity",
     "pages/exhibitor/exhibitor",
+    "pages/navigation/navigation",
     "pages/myExpo/myExpo",
-    "pages/report/report"
+    "pages/report/report",
+    "pages/exhibitorDetail/exhibitorDetail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "permission": { 
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#98999E",
@@ -48,5 +54,6 @@
         "text": "展会报告"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

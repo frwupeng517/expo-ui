@@ -1,0 +1,37 @@
+<!--components/exhibitorCmps/cityList/cityList.wxml-->
+<view class="container">
+  <!-- 城市列表 -->
+  <scroll-view scroll-y="{{allowScroll}}" style="height: {{modalHeight}}px;" scroll-into-view="{{intoView}}" scroll-with-animation="true" bindscroll="onPageScroll">
+    <view class="city-list">
+      <block wx:for="{{lists}}" wx:for-item="group" wx:for-index="groupIndex" wx:key="{{groupIndex}}">
+        <view class="city" id="{{'intoView' + group.id}}" data-id='{{group.id}}'>
+          <view class="city-header">{{group.groupName}}</view>
+          <block wx:for="{{group.items}}" wx:for-item="city" wx:for-index="cityIndex" wx:key="{{cityIndex}}">
+            <navigator class="city-body {{city.empty ? 'empty': ''}}" hover-class='none' url='/pages/exhibitorDetail/exhibitorDetail?id={{city.id}}'>
+              <view class="select-icon {{city.selected ? 'selected':''}}" data-index="{{cityIndex}}" data-groupindex="{{groupIndex}}" bindtap='toggleSelectCity'></view>
+              <view class="city-content {{cityIndex == group.items.length - 1 ? 'last-city':''}}">
+                <view class="city-content__detail">
+                  <view class="name">{{city.name}}</view>
+                  <star-cmp wx:if="{{city.star > 0}}" star="{{city.star}}"></star-cmp>
+                  <image src="/components/booth/img/hongbao.png" mode="widthFix" style="width: 40rpx; margin-left: 20rpx;" wx:if="{{city.hongBao}}"></image>
+                </view>
+                <view class="no-people" wx:if="{{city.empty}}">（展位无人）</view>
+              </view>
+            </navigator>
+          </block>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+  <!-- 右侧电梯导航 -->
+  <scroll-view scroll-y="{{allowScroll}}" style="height: {{modalHeight}}px;" class="elevator-container">
+    <block wx:for="{{lists}}" wx:key="{{index}}">
+      <view class="elevator {{activeId == item.id ? 'focus': ''}}" data-id="{{item.id}}" catch:tap="startElevator">{{item.groupName}}</view>
+    </block>
+  </scroll-view>
+  <!-- 顶部固定分类 -->
+  <!-- <view class="fixed-groupName {{fixedTitle == '' ? 'hide': ''}}" style="transform: translate3d(0, {{fixedTop}}px, 0)">
+    <view class="groupName" id="test">{{fixedTitle}}</view>
+  </view> -->
+
+</view>

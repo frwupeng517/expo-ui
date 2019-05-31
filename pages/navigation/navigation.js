@@ -1,5 +1,12 @@
 // pages/navigation/navigation.js
 Page({
+  onShowMyLocationEvent: function (event) {
+    let showMyLocation = event.detail.behavior.showMyLocation
+    console.log(showMyLocation)
+    this.setData({
+      showMyLocation: showMyLocation
+    })
+  },
   onCustomEvent: function (event) {
     console.log(event)
     let showServiceModal = event.detail.behavior.showServiceModal

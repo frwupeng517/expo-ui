@@ -1,0 +1,55 @@
+<!--components/exhibitorCmps/exhibitorDetailCmp/exhibitorDetailCmp.wxml-->
+<view class="exhibitor-detail-cmp">
+  <!-- 服务类别 -->
+  <!-- <view class="content"> -->
+  <view class="content" wx:if="{{item.serviceType && item.serviceType != ''}}">
+    <view class="title-content">
+      <view class="title" bindtap='toggleServiceType'>服务类别</view>
+    </view>
+    <view class="detail-content" hidden="{{!showServiceType}}">{{item.serviceType}}</view>
+  </view>
+  <!-- 业务种类 -->
+  <view class="content">
+    <view class="title-content">
+      <view class="title" bindtap='toggleServiceType'>业务种类</view>
+    </view>
+    <view class="detail-content" hidden="{{!showServiceType}}">
+      {{item.serviceType == ''}}
+    </view>
+  </view>
+  <!-- 展位状态 -->
+  <view class="content">
+    <view class="title-content">
+      <view class="title" bindtap='toggleServiceType'>展位状态</view>
+    </view>
+    <view class="detail-content" hidden="{{!showServiceType}}"></view>
+  </view>
+  <!-- 展位热度 -->
+  <view class="content">
+    <view class="title-content">
+      <view class="title" bindtap='toggleServiceType'>展位热度</view>
+    </view>
+    <view class="detail-content" hidden="{{!showServiceType}}"></view>
+  </view>
+  <!-- 联系方式 -->
+  <view class="content">
+    <view class="title-content">
+      <view class="title" bindtap='toggleServiceType'>联系方式</view>
+    </view>
+    <view class="detail-content" hidden="{{!showServiceType}}"></view>
+  </view>
+  <!-- 同类公司 -->
+  <view class="content">
+    <view class="title-content">
+      <view class="title" bindtap='toggleServiceType'>同类公司</view>
+    </view>
+    <view class="detail-content" hidden="{{!showServiceType}}"></view>
+  </view>
+  <!-- 同类产品 -->
+  <view class="content">
+    <view class="title-content">
+      <view class="title" bindtap='toggleServiceType'>同类产品</view>
+    </view>
+    <view class="detail-content" hidden="{{!showServiceType}}"></view>
+  </view>
+</view>

@@ -1,2 +1,12 @@
 <!--pages/activity/activity.wxml-->
-<text>pages/activity/activity.wxml</text>
+<view class="container">
+  <date-tab></date-tab>
+  <time-line></time-line>
+  <filter-tab></filter-tab>
+  <v-tab tabIndex="{{tabIndex}}" tabItems="{{tabItems}}" bind:getTabIndex="onGetTabIndex"></v-tab>
+  <!-- 选择内容 -->
+  <view hidden="{{tabIndex != 0}}">
+    <tv-list windowHeight="{{windowHeight}}"></tv-list>
+  </view>
+  <!-- 观看 -->
+</view>

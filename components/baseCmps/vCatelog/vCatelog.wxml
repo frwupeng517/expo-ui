@@ -1,0 +1,10 @@
+<!--components/baseCmps/vCatelog/vCatelog.wxml-->
+<view class="v-catelog">
+  <block wx:for="{{catelog}}" wx:key="{{index}}">
+    <view 
+      class="item {{item.selected ? 'selected' : ''}}"
+      data-index="{{index}}" 
+      bindtap='toggleCatelog'>{{item.name}}
+    </view>
+  </block>
+</view>

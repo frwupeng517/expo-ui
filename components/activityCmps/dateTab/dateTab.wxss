@@ -1,0 +1,74 @@
+/* components/dateTab/dateTab.wxss */
+.date-tab{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 130rpx;
+  background-color: #f2f2f2;
+}
+.date{
+  text-align: center;
+  color: #808080;
+}
+.date .day{
+  font-size: 28rpx;
+}
+.date .month{
+  font-size: 18rpx;
+}
+.date.selected{
+  color:#FF8980;
+
+}
+/*
+.current-date{
+  position: relative;
+  right: -8rpx;
+  display: flex;
+  align-items: flex-end;
+}
+.current-date .date{
+  width: 300rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  color: #222;
+  background-color: #fff;
+  text-align: center;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.current-date .triangle{
+  width: 0;
+  height: 0;
+  border-bottom: 110rpx solid #fff;
+  border-right: 20rpx solid transparent;
+}
+
+.next-date{
+  width: 240rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #ccc;
+  border-top-right-radius: 10rpx;
+  text-align: center;
+  transform: skewX(10deg);
+}
+.next-date .date{
+  color: #818181;
+  transform: skewX(-10deg);
+}
+
+.toggle-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #999;
+  transform: skewX(10deg);
+  border-top-right-radius: 10rpx;
+}
+.toggle-btn image{
+  transform: skewX(-10deg);
+}
+*/

@@ -1,0 +1,6 @@
+<!--components/exhibitorCmps/starCmp/starCmp.wxml-->
+<view class="star-cmp">
+  <block wx:for="{{star}}" wx:key="{{index}}">
+    <image src="/images/star.png" mode='widthFix' style="width: 40rpx;"></image>
+  </block>
+</view>

@@ -1,0 +1,30 @@
+/* components/baseCmps/vCatelog/vCatelog.wxss */
+.v-catelog{
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+.v-catelog .item{
+  padding: 30rpx 0;
+  font-size: 28rpx;
+  color: #808080;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.v-catelog .item.selected{
+  position: relative;
+  color: #000;
+  background-color: #fff;
+  border-bottom: none;
+}
+.v-catelog .item.selected::before{
+  position: absolute;
+  top: 40rpx;
+  left: 20rpx;
+  display: block;
+  content: '';
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #ff877e;
+  border-radius: 50%;
+}

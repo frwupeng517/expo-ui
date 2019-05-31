@@ -1,0 +1,26 @@
+<!--pages/exhibitorDetail/exhibitorDetail.wxml-->
+<view class="container">
+  <view class="title">公司简介</view>
+  <view class="company-intro">
+    <view class="icons">
+      <view class="location-icon">
+        <image src="/pages/exhibitor/img/location.png" mode='widthFix' style="width: 40rpx;"></image>
+        <view class="text">展位位置</view>
+      </view>
+      <view class="expo-icon">
+        <view class="expo-number">展位号：{{item.expoNum}}</view>
+      </view>
+    </view>
+    <view class="company-logo">
+      <image src="{{item.logo}}" mode="widthFix" style="max-width: 100%;"></image>
+    </view>
+    <view class="company-name">{{item.name}}</view>
+    <view class="main-title">
+      <view class="main-title__text">公司简介</view>
+    </view>
+    <view class="company-desc">{{item.description}}</view>
+  </view>
+  <view class="company-more">
+    <exhibitor-cmp item="{{item}}"></exhibitor-cmp>
+  </view>
+</view>

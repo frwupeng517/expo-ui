@@ -1,0 +1,13 @@
+<!--components/activityCmps/filterTab/filterTab.wxml-->
+<view class="filter-tab">
+  <block wx:for="{{tabs}}" wx:key="{{index}}">
+    <view class="tab {{activeIndex == index ? 'selected' : ''}}" id="{{index}}" bindtap='tabChange'>
+    <view class="tab-text">{{item}}</view>
+    <view class="tab-icon" style="transform: rotate(-180deg);"></view>
+  </view>
+  </block>
+</view>
+
+<!-- <view class="shade {{shade?'':'active'}}" bindtap='hideShade'>
+
+</view> -->

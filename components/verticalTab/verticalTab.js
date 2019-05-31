@@ -37,7 +37,20 @@ Component({
       })
       // 获取我的位置
       if(index == 0) {
-        this.getMyLocation()
+        // this.getMyLocation()
+        let behavior = {
+          showMyLocation: true
+        }
+        this.triggerEvent('showMyLocationEvent', {
+          behavior: behavior
+        }, {})
+      } else{
+        let behavior = {
+          showMyLocation: false
+        }
+        this.triggerEvent('showMyLocationEvent', {
+          behavior: behavior
+        }, {})
       }
 
       // 关注店铺
@@ -75,7 +88,7 @@ Component({
     },
     // 获取我的位置
     getMyLocation() {
-
+      
     },
     // 过滤出我关注的店铺
     getMyFoucsShops() {

@@ -2,5 +2,10 @@
   "navigationBarTitleText": "展商名册",
   "navigationBarBackgroundColor": "#E56F6F",
   "navigationBarTextStyle": "white",
-  "usingComponents": {}
+  "usingComponents": {
+    "custom-modal": "/components/customModal/customModal",
+    "city-list": "/components/exhibitorCmps/cityList/cityList",
+    "v-catelog": "/components/baseCmps/vCatelog/vCatelog",
+    "v-scroll": "/components/baseCmps/vScroll/vScroll"
+  }
 }

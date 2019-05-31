@@ -1,0 +1,19 @@
+<!--components/dateTab/dateTab.wxml-->
+<view class="date-tab">
+  <block wx:for="{{weekDateArray}}" wx:key="{{index}}">
+    <view class="date {{index == currentDateIndex ? 'selected' : ''}}" data-index="{{index}}" bindtap='toggleDate'>
+      <view class="day">{{item.day}}</view>
+      <view class="month">{{item.chineseMonth}}</view>
+    </view>
+  </block>
+  <!-- <view class="current-date">
+    <view class="date">6月1日</view>
+    <view class="triangle"></view>
+  </view>
+  <view class="next-date">
+    <view class="date">6月2日</view>
+  </view>
+  <view class="toggle-btn">
+    <image src="{{nextIcon}}" mode="widthFix" style="width: 50rpx;"></image>
+  </view> -->
+</view>

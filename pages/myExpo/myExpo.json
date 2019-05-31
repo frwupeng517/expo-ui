@@ -2,5 +2,11 @@
   "navigationBarTitleText": "我的展会",
   "navigationBarBackgroundColor": "#E56F6F",
   "navigationBarTextStyle": "white",
-  "usingComponents": {}
+  "usingComponents": {
+    "date-tab": "/components/activityCmps/dateTab/dateTab",
+    "time-line": "/components/activityCmps/timeLine/timeLine",
+    "v-tab": "/components/baseCmps/vTab/vTab",
+    "v-catelog": "/components/baseCmps/vCatelog/vCatelog",
+    "v-scroll": "/components/baseCmps/vScroll/vScroll"
+  }
 }

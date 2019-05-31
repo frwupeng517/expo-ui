@@ -1,0 +1,17 @@
+/* components/baseCmps/vTab/vTab.wxss */
+.tabs{
+  display: flex;
+}
+.tab{
+  width: 50%;
+  padding: 23rpx;
+  font-size: 32rpx;
+  letter-spacing: 4rpx;
+  text-align: center;
+  color: #808080;
+  background-color: #dadada;
+}
+.tab.selected{
+  color: #fff;
+  background-color: #ff8e85;
+}

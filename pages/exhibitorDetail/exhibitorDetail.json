@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "展商名册",
+  "navigationBarBackgroundColor": "#E56F6F",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "exhibitor-cmp": "/components/exhibitorCmps/exhibitorDetailCmp/exhibitorDetailCmp"
+  }
+}

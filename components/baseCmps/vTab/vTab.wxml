@@ -1,0 +1,6 @@
+<!--components/baseCmps/vTab/vTab.wxml-->
+<view class="tabs">
+  <block wx:for="{{tabItems}}" wx:key="{{index}}">
+    <view class="tab {{index == tabIndex ? 'selected' : ''}}" data-index="{{index}}" bindtap='toggleTab'>{{item}}</view>
+  </block>
+</view>

@@ -2,5 +2,11 @@
   "navigationBarTitleText": "今日活动",
   "navigationBarBackgroundColor": "#E56F6F",
   "navigationBarTextStyle": "white",
-  "usingComponents": {}
+  "usingComponents": {
+    "date-tab": "/components/activityCmps/dateTab/dateTab",
+    "time-line": "/components/activityCmps/timeLine/timeLine",
+    "filter-tab": "/components/activityCmps/filterTab/filterTab",
+    "tv-list": "/components/activityCmps/tvList/tvList",
+    "v-tab": "/components/baseCmps/vTab/vTab"
+  }
 }

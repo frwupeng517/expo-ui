@@ -4,7 +4,8 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    showHongBao: Boolean
+    showHongBao: Boolean,
+    showMyLocation: Boolean
   },
   
 
@@ -13,6 +14,8 @@ Component({
    */
   data: {
     scrollTop: 100,
+    x: 120, // 人的初始横向位置
+    y: 120, // 人的初始纵向位置,
     booths: [
       { id: "0", name: "展位A", isFoucs: false, luckyMoney: false },
       { id: "1", name: "展位B", isFoucs: false, luckyMoney: false },
@@ -75,5 +78,12 @@ Component({
         booths: this.data.booths
       })
     },
+    // 当人的位置发生改变时触发的方法
+    onChange(e) {
+      this.setData({
+        x: e.detail.x,
+        y: e.detail.y
+      })
+    }
   }
 })

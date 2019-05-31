@@ -1,0 +1,9 @@
+<!--components/customModal/customModal.wxml-->
+<view class="modal" wx:if="{{showModal}}" style="height: {{modalHeight}}px;">
+  <view class="modal-body" style="max-height: {{modalHeight - 50}}px;">
+    <slot name="catelog"></slot>
+    <slot name="location"></slot>
+    <slot name="popular"></slot>
+    <slot name="status"></slot>
+  </view>
+</view>

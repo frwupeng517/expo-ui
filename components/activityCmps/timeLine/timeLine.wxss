@@ -1,0 +1,56 @@
+/* components/timeLine/timeLine.wxss */
+.time-line{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 30rpx 30rpx;
+  text-align: center;
+  box-sizing: border-box;
+}
+.start, .end{
+  font-size: 26rpx;
+}
+.line-container{
+  position: relative;
+  flex: 1;
+  margin: 0 10rpx;
+}
+.line{
+  height: 2px;
+  background-color: #efefef;
+}
+.line-slider{
+  position: absolute;
+  top: -1px;
+  height: 3px;
+  background-color: #009be5;
+}
+.line-slider__desc{
+  position: absolute;
+  top: -8rpx;
+  width: 80rpx;
+}
+.line-slider__circle{
+  width: 20rpx;
+  height: 20rpx;
+  margin: 0 auto;
+  background-color: #009be5;
+  border-radius: 50%;
+}
+/* .line-slider::after{
+  position: absolute;
+  top: -6rpx;
+  right: -4rpx;
+  display: block;
+  content: '';
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #009be5;
+  border-radius: 50%;
+} */
+.line-slider__text{
+  
+  margin-top: 6rpx;
+  font-size: 26rpx;
+  color: #ff7a70;
+}
