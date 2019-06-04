@@ -12,16 +12,37 @@ Page({
   getItemById() {
     // ...... 请求后台的查询方法
     let item = {
-      name: '广东百事泰电子商务股份有限公司',
-      expoNum: 'T2',
-      logo: 'img/logo.png',
-      description: '广东百事泰电子商务股份有限公司（股票简称：百事泰，股票代码：833663）是国内首家国际F2C跨境电商连锁企业，主要从事排插电源类、车载逆变器、以及智能家居家电类产品的研发、生产及跨境电子商务销售。成立11年，百事泰已完成从传统制造企业向现代化互联网企业转型，与全球多家线上线下平台进行深度合作，为深圳市政府评定的F2C标杆企业。2018年将加快海外网店建设及国内外智能家居领域的部署，开启打造全球化智能家居知名品牌新征程。',
-      serviceType: [],
+      name: '顺丰速运有限公司',
+      expoNum: 'T01',
+      logo: 'img/sf_logo.png',
+      description: '1993年，顺丰诞生于广东顺德。自成立以来，顺丰始终专注于服务质量的提升，持续加强基础建设，积极研发和引进具有高科技含量的信息技术与设备以提升自动化水平，在国内外建立了庞大的信息采集，市场开发，物流配送，快件收派等速运业务机构及服务网络。\r\n\n在国际物流服务领域，顺丰致力于为国内外制造企业、贸易企业、跨境电商、以及消费者，提供便捷可靠的国际快递、物流及供应链解决方案。面向中国市场，顺丰国际既帮助中国优秀企业“走出去”，亦将海外优质商品“引进来”。\r\n\n目前顺丰国际提供包括国际标快、国际特惠、国际小包、国际重货、包税仓储、海外仓储、转运等不同类型及时效标准的进出口服务，并可根据客户需求量身定制包括市场准入、运输、清关、派送在内的一体化的进出口解决方案。',
+      serviceType: "/pages/exhibitorDetail/img/serviceTypeImg.png",
+      businessType: "/pages/exhibitorDetail/img/businessTypeImg.png",
 
     }
     this.setData({
       item: item
     })
+  },
+  /**
+   * 获取公司名的宽度
+   */
+  calCompanyNameWidth() {
+    let _this = this
+    const query = wx.createSelectorQuery()
+    query.select('#companyName').boundingClientRect(function(rect){
+      let align;
+      // 如果屏幕宽度 - 公司名文字宽度 大于100就居中，否则左对齐
+      if (_this.data.windowWidth - rect.width > 100) {
+        align = 'center'
+      } else{
+        align = 'left'
+      }
+      _this.setData({
+        companyNameWidth: rect.width,
+        companyNameAlign: align
+      })
+    }).exec()
   },
 
   /**
@@ -29,13 +50,25 @@ Page({
    */
   onLoad: function (options) {
     this.getItemById()
+    let _this = this
+    wx.nextTick(() => {
+      wx.getSystemInfo({
+        success: function(res) {
+          _this.setData({
+            windowWidth: res.windowWidth
+          })
+        }
+      })
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    wx.nextTick(() => {
+      this.calCompanyNameWidth()
+    })
   },
 
   /**

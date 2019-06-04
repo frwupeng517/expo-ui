@@ -22,8 +22,6 @@ Component({
    */
   methods: {
     saveBooth(event) {
-      console.log(event)
-      console.log(this.properties.booth)
       let id = event.currentTarget.dataset.id
       let booth = this.properties.booth
       if(!booth.isFoucs) {

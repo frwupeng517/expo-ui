@@ -12,6 +12,7 @@ Component({
    */
   data: {
     showServiceType: false, // 展示服务类型
+    showBusinessType: false, // 业务类型
   },
 
   /**
@@ -19,11 +20,19 @@ Component({
    */
   methods: {
     // 切换显示服务类型
-    toggleServiceType(e) {
-      let showServiceType = showServiceType = this.data.showServiceType ? false : true;
-      this.setData({
-        showServiceType: showServiceType
-      });
+    toggleDetailContent(e) {
+      let type = e.currentTarget.dataset.type
+      if(type == "serviceType") { // 服务类别
+        let showServiceType = this.data.showServiceType ? false : true
+        this.setData({
+          showServiceType: showServiceType
+        })
+      } else if(type == "businessType") { // 业务类型
+        let showBusinessType = this.data.showBusinessType ? false : true
+        this.setData({
+          showBusinessType: showBusinessType
+        })
+      }
     }
   }
 })

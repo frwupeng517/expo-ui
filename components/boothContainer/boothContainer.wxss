@@ -1,9 +1,10 @@
 /* components/boothContainer/boothContainer.wxss */
 .booth-container{
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   /* width: 100%;  */
-  width: 600px;
+  /* width: 600px; */
   overflow: auto;
   margin-top: 20rpx;
   padding: 20rpx;
@@ -13,7 +14,7 @@
 .booth{
   width: 120rpx;
   height: 80rpx;
-  margin: 0 70rpx 50rpx 0;
+  margin: 0 50rpx 50rpx 0;
   background-color: #E6E6E6;
 }
 
@@ -39,3 +40,100 @@ movable-area{
   border-radius: 50%;
 }
 
+.tuijian-line{
+  position: absolute;
+  top: 255rpx;
+  left: 255rpx;
+  width:80rpx;
+  height: 260rpx;
+  border-style: dashed;
+  border-color: #df574b;
+  border-width: 2px 2px 0 0;
+}
+.tuijian-line::after{
+  position: absolute;
+  left: 80rpx;
+  bottom: -20rpx;
+  display: block;
+  content: '';
+  width: 80rpx;
+  height: 20rpx;
+  border-style: dashed;
+  border-color: #df574b;
+  border-width: 2px 2px 0 0;
+}
+.tuijian-icon{
+  position: absolute;
+  top: 529rpx;
+  left: 397rpx;
+  width: 40rpx;
+}
+.my-line{
+  position: absolute;
+  
+  background-color: #99cc66;
+}
+.my-line1{
+  top: 640rpx;
+  left: 0;
+  width: 160rpx;
+  height: 10rpx;
+}
+.my-line1::after, .my-line2::after{
+  position: absolute;
+  right: -10rpx;
+  display: block;
+  content: '';
+  width: 10rpx;
+  height: 260rpx;
+  background-color: #99cc66;
+}
+.my-line2{
+  top: 900rpx;
+  left: 160rpx;
+  width: 340rpx;
+  height: 10rpx;
+}
+.my-line1::after{
+  top: 0;
+}
+.my-line2::after{
+  bottom: 0;
+}
+.my-line3{
+  left: 440rpx;
+  top: 640rpx;
+  width: 70rpx;
+  height: 10rpx;
+}
+.my-line__dot{
+  position: absolute;
+  left: 397rpx;
+  top: 624rpx;
+}
+.hot-area{
+  position: absolute;
+  top: 126rpx;
+  left: 110rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400rpx;
+  height: 400rpx;
+  /* background-color: #e65c54; */
+  background-color: rgba(230,96,84,0.3);
+  border-radius: 50%;
+  /* opacity: 0.3; */
+  z-index: 1;
+}
+.hot-area__center{
+  position: absolute;
+  top: 210rpx;
+  left: 212rpx;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #e65c54;
+  border-radius: 50%;
+  opacity: 0.8;
+  z-index: 99;
+}

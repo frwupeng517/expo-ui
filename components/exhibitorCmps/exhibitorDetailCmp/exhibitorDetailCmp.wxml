@@ -2,54 +2,58 @@
 <view class="exhibitor-detail-cmp">
   <!-- 服务类别 -->
   <!-- <view class="content"> -->
-  <view class="content" wx:if="{{item.serviceType && item.serviceType != ''}}">
-    <view class="title-content">
-      <view class="title" bindtap='toggleServiceType'>服务类别</view>
-    </view>
-    <view class="detail-content" hidden="{{!showServiceType}}">{{item.serviceType}}</view>
-  </view>
-  <!-- 业务种类 -->
-  <view class="content">
-    <view class="title-content">
-      <view class="title" bindtap='toggleServiceType'>业务种类</view>
+  <view class="content" wx:if="{{item.serviceType != null}}">
+    <view class="title-content" data-type="serviceType" bindtap='toggleDetailContent'>
+      <view class="title">服务类别</view>
+      <view class="more {{showServiceType ? 'open' : ''}}"></view>
     </view>
     <view class="detail-content" hidden="{{!showServiceType}}">
-      {{item.serviceType == ''}}
+      <image src="{{item.serviceType}}" mode="widthFix"></image>
+    </view>
+  </view>
+  <!-- 业务种类 -->
+  <view class="content" wx:if="{{item.businessType != null}}">
+    <view class="title-content" data-type="businessType" bindtap='toggleDetailContent'>
+      <view class="title">业务种类</view>
+      <view class="more {{showBusinessType ? 'open' : ''}}"></view>
+    </view>
+    <view class="detail-content" hidden="{{!showBusinessType}}">
+      <image src="{{item.businessType}}" mode="widthFix"></image>
     </view>
   </view>
   <!-- 展位状态 -->
   <view class="content">
     <view class="title-content">
-      <view class="title" bindtap='toggleServiceType'>展位状态</view>
+      <view class="title">展位状态</view>
     </view>
-    <view class="detail-content" hidden="{{!showServiceType}}"></view>
+    <view class="detail-content" hidden="true"></view>
   </view>
   <!-- 展位热度 -->
   <view class="content">
     <view class="title-content">
-      <view class="title" bindtap='toggleServiceType'>展位热度</view>
+      <view class="title">展位热度</view>
     </view>
-    <view class="detail-content" hidden="{{!showServiceType}}"></view>
+    <view class="detail-content" hidden="true"></view>
   </view>
   <!-- 联系方式 -->
   <view class="content">
     <view class="title-content">
-      <view class="title" bindtap='toggleServiceType'>联系方式</view>
+      <view class="title">联系方式</view>
     </view>
-    <view class="detail-content" hidden="{{!showServiceType}}"></view>
+    <view class="detail-content" hidden="true"></view>
   </view>
   <!-- 同类公司 -->
   <view class="content">
     <view class="title-content">
-      <view class="title" bindtap='toggleServiceType'>同类公司</view>
+      <view class="title">同类公司</view>
     </view>
-    <view class="detail-content" hidden="{{!showServiceType}}"></view>
+    <view class="detail-content" hidden="true"></view>
   </view>
   <!-- 同类产品 -->
   <view class="content">
     <view class="title-content">
-      <view class="title" bindtap='toggleServiceType'>同类产品</view>
+      <view class="title">同类产品</view>
     </view>
-    <view class="detail-content" hidden="{{!showServiceType}}"></view>
+    <view class="detail-content" hidden="true"></view>
   </view>
 </view>

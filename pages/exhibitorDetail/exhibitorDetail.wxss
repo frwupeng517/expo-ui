@@ -14,7 +14,7 @@ page{
   background-color: #e6e6e6;
 }
 .company-intro{
-  padding: 10rpx 20rpx;
+  padding: 10rpx 30rpx 30rpx;
   background-color: #fff;
 }
 .company-intro .icons{
@@ -32,24 +32,33 @@ page{
   color:#DF5B4F;
 }
 .expo-icon{
-  padding: 0 16rpx;
-  border: 1px solid #F2D556;
+  padding: 0 20rpx;
+  border: 1px solid #ecb11a;
 }
 .expo-icon .expo-number{
   font-size: 28rpx;
-  color: #F2D556;
+  font-weight: 700;
+  color: #ecb11a;
 }
 .company-logo{
   margin-top: 20rpx;
   width: 200rpx;
 }
 .company-name, .main-title{
-  font-size: 32rpx;
+  font-size: 38rpx;
   font-weight: 600;
-  color: #3a3a3a;
+  color: #000;
 }
 .company-name{
   margin-top: 10rpx;
+  display: inline-block;
+}
+
+.company-info{
+  text-align: left;
+}
+.company-info.center{
+  margin: 0 auto;
 }
 .main-title{
   margin-top: 40rpx;
@@ -57,7 +66,7 @@ page{
 }
 .main-title__text{
   position: relative;
-  width: 160rpx;
+  width: 180rpx;
   margin: 0 auto;
   text-align: center;
   z-index: 2;
@@ -69,12 +78,11 @@ page{
   content: '';
   width: 100%;
   height: 20rpx;
-  background-color: #f1ad28;
+  background-color: #ecb11d;
   z-index: -1;
 }
 .company-desc{
-  text-indent: 48rpx;
-  font-size: 24rpx;
+  font-size: 28rpx;
   color: #3a3a3a;
 }
 

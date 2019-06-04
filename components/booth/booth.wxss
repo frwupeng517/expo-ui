@@ -10,11 +10,15 @@
   color: #fff;
   background-color: #FF776D;
 }
+.visited{
+  background-color: #7bc5bc;
+}
 .booth-name{
   font-size: 28rpx;
-  overflow:hidden;
+  text-align: center;
+  /* overflow:hidden;
   text-overflow:ellipsis;
-  white-space:nowrap;
+  white-space:nowrap; */
 }
 
 .hongbao{

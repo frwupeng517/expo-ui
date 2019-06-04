@@ -1,5 +1,5 @@
 <!--components/booth/booth.wxml-->
-<view class="item {{booth.isFoucs ? 'focus': ''}}" data-id="{{booth.id}}" bindtap='saveBooth'>
+<view class="item {{booth.isFoucs ? 'focus': ''}} {{booth.visited ? 'visited' : ''}}" data-id="{{booth.id}}" bindtap='saveBooth'>
   <view class="booth-name" wx:if="{{booth.name && booth.name != ''}}">{{booth.name}}</view>
   <image class="hongbao" wx:if="{{booth.luckyMoney && showHongBao}}" src="./img/hongbao.png" mode="widthFix" />
 </view>

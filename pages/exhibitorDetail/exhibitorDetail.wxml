@@ -11,14 +11,20 @@
         <view class="expo-number">展位号：{{item.expoNum}}</view>
       </view>
     </view>
-    <view class="company-logo">
-      <image src="{{item.logo}}" mode="widthFix" style="max-width: 100%;"></image>
+    <view class="company-info__content">
+      <view class="company-info  {{companyNameAlign == 'center' ? 'center' : ''}}" style="width: {{companyNameWidth}}px;">
+        <view class="company-logo">
+          <image src="{{item.logo}}" mode="widthFix" style="max-width: 100%;"></image>
+        </view>
+        <view class="company-name" id="companyName">{{item.name}}</view>
+      </view>
     </view>
-    <view class="company-name">{{item.name}}</view>
     <view class="main-title">
       <view class="main-title__text">公司简介</view>
     </view>
-    <view class="company-desc">{{item.description}}</view>
+    <view class="company-desc">
+      <text>{{item.description}}</text>
+    </view>
   </view>
   <view class="company-more">
     <exhibitor-cmp item="{{item}}"></exhibitor-cmp>
